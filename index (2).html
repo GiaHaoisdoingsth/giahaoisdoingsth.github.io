@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gia Hao | Marketing &amp; Communication</title>
+<meta name="description" content="Gia Hao is a marketing fresher rooted in social media and the F&B industry, open to new challenges and new industries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--van:#A9C7CC;--teal:#1B3A41;--teal2:#2A5560;--sand:#EADBBF;--poppy:#C8301F;
+--display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+--body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1.0625rem/1.7 var(--body);color:var(--teal);background:var(--van);overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--poppy);outline-offset:4px;border-radius:4px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+h1,h2{font-family:var(--display);margin:0;letter-spacing:-.04em}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+.nav .logo{font:800 1.25rem var(--display);text-decoration:none;letter-spacing:-.02em}
+.nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0;font-weight:500;font-size:.95rem}
+.nav ul a{text-decoration:none}
+.nav ul a:hover{text-decoration:underline;text-underline-offset:6px}
+
+/* cover: a desk you can rearrange */
+.desk{position:relative;min-height:clamp(560px,84vh,800px);display:grid;place-items:center;margin-top:.5rem}
+.word{position:relative;z-index:5;font-size:clamp(3.6rem,18vw,15rem);line-height:.9;font-weight:800;letter-spacing:-.055em;color:var(--poppy);pointer-events:none;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(30%)}to{opacity:1;transform:none}}
+[data-drag]{position:absolute;z-index:6;cursor:grab;touch-action:none;user-select:none;transition:box-shadow .2s,scale .2s}
+[data-drag].held{cursor:grabbing;scale:1.06;box-shadow:0 14px 30px rgba(27,58,65,.28)}
+.photo{left:62%;top:6%;width:clamp(150px,24vw,300px);aspect-ratio:3/4;margin:0;background:var(--teal);border:10px solid var(--sand);border-radius:6px;rotate:4deg;z-index:2}
+.photo::before{content:"";position:absolute;left:50%;top:-24px;width:84px;height:26px;margin-left:-42px;background:rgba(234,219,191,.85);rotate:-3deg;z-index:3}
+.photo .gh{position:absolute;inset:0;display:grid;place-items:center;font:800 4rem var(--display);color:var(--van)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.sticker{left:50%;top:64%;width:116px;border-radius:50%;animation:spin 16s linear infinite}
+.sticker text{font-family:var(--display);font-weight:800;font-size:13px;fill:var(--sand)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sw{left:5%;top:10%;display:flex}
+.sw div{width:92px;height:128px;padding:8px;display:flex;flex-direction:column;background:#fff;border-radius:6px;font:600 .72rem/1.2 var(--body);box-shadow:0 6px 16px rgba(27,58,65,.18)}
+.sw i{flex:1;border-radius:3px;margin-bottom:8px}
+.sw div:nth-child(1){rotate:-8deg}
+.sw div:nth-child(2){rotate:3deg;margin-left:-26px}
+.sw div:nth-child(3){rotate:12deg;margin-left:-26px}
+.note{left:34%;top:5%;width:150px;padding:1rem;background:#F3D36B;rotate:-5deg;font:800 1.2rem/1.15 var(--display);letter-spacing:-.02em;box-shadow:0 6px 16px rgba(27,58,65,.18)}
+.cur{left:9%;top:70%;display:flex}
+.cur svg{width:34px;height:34px;flex:none}
+.cur span{margin:24px 0 0 -4px;align-self:flex-start;background:var(--teal);color:var(--sand);font:600 .85rem/1 var(--body);padding:.5rem .85rem;border-radius:999px 999px 999px 4px}
+.aa{left:79%;top:68%;width:108px;height:108px;display:grid;place-items:center;background:#fff;border-radius:14px;font:800 3.4rem/1 var(--display);letter-spacing:-.05em;rotate:-6deg;box-shadow:0 6px 16px rgba(27,58,65,.18)}
+.bz{left:26%;top:76%;width:170px}
+.lede{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;padding:1rem 0 clamp(3rem,7vw,5rem)}
+.lede p{margin:0;max-width:22ch;font:500 clamp(1.6rem,3.6vw,2.9rem)/1.1 var(--display);letter-spacing:-.03em}
+.btn{display:inline-block;background:var(--teal);color:var(--van);padding:.9rem 1.7rem;border-radius:999px;font-weight:600;text-decoration:none;transition:background .2s,color .2s}
+.btn:hover{background:var(--poppy);color:#fff}
+
+.marquee{background:var(--poppy);color:var(--sand);overflow:hidden;white-space:nowrap;padding:1rem 0}
+.track{display:inline-flex;animation:slide 32s linear infinite}
+.track span{display:inline-flex;align-items:center;gap:2rem;padding-right:2rem;font:800 clamp(1.5rem,3vw,2.25rem)/1 var(--display);letter-spacing:-.02em}
+.track span::after{content:"";width:.5em;height:.5em;border-radius:50%;background:var(--sand)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+.about{background:var(--sand);padding:clamp(4rem,9vw,8rem) 0}
+.big{margin:0;max-width:20em;font:500 clamp(1.9rem,4.6vw,3.9rem)/1.12 var(--display);letter-spacing:-.03em}
+mark{background:linear-gradient(transparent 58%,var(--van) 58%);color:inherit;padding:0 .08em}
+.about-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
+.about-cols p{margin:0 0 1.25rem;max-width:56ch}
+.pills{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.pills a{border:2px solid var(--teal);padding:.5rem 1.25rem;border-radius:999px;font-weight:500;text-decoration:none;transition:background .2s,color .2s}
+.pills a:hover{background:var(--teal);color:var(--sand)}
+
+.more{background:var(--teal);color:var(--sand);padding:clamp(4rem,9vw,8rem) 0}
+.more h2{font-size:clamp(2.5rem,6vw,5rem);font-weight:800;line-height:.95;margin-bottom:2.5rem}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.tile{min-height:clamp(220px,28vw,340px);padding:1.5rem;border-radius:10px;display:flex;flex-direction:column;justify-content:space-between;background-color:var(--c);background-image:var(--img,none);background-size:cover;background-position:center;color:var(--tc);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.tile:hover{transform:rotate(-1.2deg) scale(1.015)}
+.tile small{align-self:flex-start;font-size:.85rem;font-weight:500;border:2px solid currentColor;border-radius:999px;padding:.15rem .8rem}
+.tile b{display:block;font:800 clamp(1.9rem,4vw,3.25rem)/1 var(--display);letter-spacing:-.03em}
+.tile p{margin:.5rem 0 0;max-width:26ch}
+
+.contact{padding:clamp(4rem,9vw,8rem) 0}
+.contact h2{font-size:clamp(3rem,10vw,8.5rem);line-height:.88;font-weight:800}
+.contact .lead{max-width:40ch;margin:1.5rem 0 2rem;font-size:1.15rem}
+.mail{display:inline-block;font:800 clamp(1.35rem,4.2vw,3rem)/1.15 var(--display);letter-spacing:-.02em;overflow-wrap:anywhere;text-decoration-thickness:3px;text-underline-offset:8px}
+.mail:hover{color:var(--poppy)}
+.info{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin-top:2.5rem}
+.info a{text-decoration:none}
+.info a:hover{text-decoration:underline}
+footer{padding:1.75rem 0;border-top:1px solid rgba(27,58,65,.25);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* viewfinder that follows the mouse and locks onto photos, tiles and links */
+.vf{position:fixed;left:0;top:0;width:44px;height:44px;pointer-events:none;z-index:60;opacity:0;filter:drop-shadow(0 0 1px #fff);transition:width .25s,height .25s,opacity .2s,transform .12s ease-out}
+.vf.on{opacity:1}
+.vf i{position:absolute;width:14px;height:14px;border:3px solid var(--poppy)}
+.vf i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.vf i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.vf i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.vf i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.vf::after{content:"";position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px;border-radius:50%;background:var(--poppy);transition:opacity .2s}
+.vf.lock::after{opacity:0}
+.flash{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:70}
+.flash.go{animation:flash .35s ease-out}
+@keyframes flash{from{opacity:.6}to{opacity:0}}
+
+@media (max-width:820px){
+  .desk{min-height:640px}
+  .photo{left:52%;top:3%;width:42vw}
+  .note{left:3%;top:4%;width:118px;font-size:1rem}
+  .sw{left:3%;top:46%}
+  .sticker{left:42%;top:72%;width:92px}
+  .cur{left:48%;top:86%}
+  .aa,.bz{display:none}
+  .about-cols,.tiles{grid-template-columns:1fr}
+  .nav ul{gap:1.1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .word,.sticker,.track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#top">Gia Hao</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#more">More</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mọi món đồ trên bàn đều kéo thả được -->
+    <div class="desk">
+      <h1 class="word" aria-label="Gia Hao, Portfolio">Portfolio</h1>
+
+      <!-- Ảnh của bạn: images/gia-hao.jpg. Chưa có ảnh thì khung hiện chữ GH. -->
+      <figure class="photo" data-drag data-focus>
+        <span class="gh" aria-hidden="true">GH</span>
+        <img src="images/gia-hao.jpg" alt="Portrait of Gia Hao holding a camera" onerror="this.remove()" draggable="false">
+      </figure>
+
+      <svg class="sticker" data-drag viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+        <circle cx="60" cy="60" r="60" fill="#C8301F"/>
+        <text letter-spacing="1"><textPath href="#ring" textLength="268">WHY NOT? WHY NOT? WHY NOT? </textPath></text>
+      </svg>
+
+      <div class="sw" data-drag aria-hidden="true">
+        <div><i style="background:#C8301F"></i>Social</div>
+        <div><i style="background:#1B3A41"></i>Content</div>
+        <div><i style="background:#F3D36B"></i>Strategy</div>
+      </div>
+
+      <div class="note" data-drag aria-hidden="true">Brief: surprise me.</div>
+
+      <div class="cur" data-drag aria-hidden="true">
+        <svg viewBox="0 0 34 34"><path d="M4 3v24l7-7 5 11 5-2-5-11h10z" fill="#1B3A41" stroke="#EADBBF" stroke-width="2" stroke-linejoin="round"/></svg>
+        <span>Gia Hao</span>
+      </div>
+
+      <div class="aa" data-drag aria-hidden="true">Aa</div>
+
+      <svg class="bz" data-drag viewBox="0 0 170 70" aria-hidden="true">
+        <path d="M8 58C40 4 80 4 100 34S150 58 162 14" fill="none" stroke="#1B3A41" stroke-width="3" stroke-linecap="round"/>
+        <path d="M8 58L40 24M162 14L132 50" stroke="#1B3A41" stroke-width="1.5"/>
+        <g fill="#EADBBF" stroke="#1B3A41" stroke-width="2"><rect x="3" y="53" width="10" height="10"/><rect x="157" y="9" width="10" height="10"/><circle cx="40" cy="24" r="4"/><circle cx="132" cy="50" r="4"/></g>
+      </svg>
+    </div>
+
+    <div class="lede">
+      <p>Hand me any industry and I’ll find the story it hasn’t told yet.</p>
+      <a class="btn" href="#contact">Say hello</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Social media</span><span>Content</span><span>Brand stories</span><span>Every industry</span><span>New industries</span><span>Creative process</span><span>Unexpected places</span><span>Why not?</span>
+    <span>Social media</span><span>Content</span><span>Brand stories</span><span>Every industry</span><span>New industries</span><span>Creative process</span><span>Unexpected places</span><span>Why not?</span>
+  </div>
+</div>
+
+<main>
+  <section class="about" id="about">
+    <div class="wrap">
+      <p class="big">As a marketing fresher, my core foundation is rooted in <mark>social media</mark> and the <mark>F&amp;B industry</mark>, but my mindset is all about exploration.</p>
+      <div class="about-cols">
+        <p>I am highly eager to dive into every other facet of marketing. I firmly believe that great marketing transcends boundaries, which is why I am completely open to jumping into entirely new industries.</p>
+        <div>
+          <p>Why not? I am always ready to tackle fresh challenges and see how my creative process can drive impact in unexpected places.</p>
+          <!-- Thay dấu # bằng link thật của bạn -->
+          <div class="pills">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="more" id="more">
+    <div class="wrap">
+      <h2>Morething about me</h2>
+      <!-- Có ảnh cho từng ô thì thêm vào style, ví dụ: --img:url(images/work-1.jpg) -->
+      <div class="tiles">
+        <article class="tile" data-focus style="--c:var(--sand);--tc:var(--teal)">
+          <small>Coming soon</small>
+          <div><b>Working Experience</b><p>The places I have worked.</p></div>
+        </article>
+        <article class="tile" data-focus style="--c:var(--poppy);--tc:var(--sand)">
+          <small>Coming soon</small>
+          <div><b>Practical Experience</b><p>Hands-on work beyond a formal job.</p></div>
+        </article>
+        <article class="tile" data-focus style="--c:var(--van);--tc:var(--teal)">
+          <small>Coming soon</small>
+          <div><b>School Projects</b><p>Projects from my school years.</p></div>
+        </article>
+        <article class="tile" data-focus style="--c:var(--teal2);--tc:var(--sand)">
+          <small>Coming soon</small>
+          <div><b>Personal Projects</b><p>Projects I started on my own.</p></div>
+        </article>
+      </div>
+      <!-- Nhúng dự án Behance CỦA BẠN (thay PROJECT_ID bằng mã trong code nhúng của bạn):
+      <div style="width:100%;aspect-ratio:404/316;margin-top:1rem">
+        <iframe src="https://www.behance.net/embed/project/PROJECT_ID?ilo0=1" title="Tên dự án" loading="lazy" allowfullscreen allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:100%;border:0"></iframe>
+      </div> -->
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>So, why not talk?</h2>
+      <p class="lead">Open to new roles and new industries. Send me a message.</p>
+      <a class="mail" href="mailto:truonggiahao2004.contact@gmail.com">truonggiahao2004.contact@gmail.com</a>
+      <div class="info">
+        <a href="tel:+84766983539">+84 766 983 539</a>
+        <span>Binh Phu ward, Ho Chi Minh</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Copyright &copy; 2026, Gia Hao</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script>
+(()=>{
+  const fine=matchMedia('(hover:hover) and (pointer:fine)').matches,
+        calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(!fine||calm)return;
+  const vf=document.createElement('div');vf.className='vf';vf.setAttribute('aria-hidden','true');
+  vf.innerHTML='<i></i><i></i><i></i><i></i>';
+  const fl=document.createElement('div');fl.className='flash';fl.setAttribute('aria-hidden','true');
+  document.body.append(vf,fl);
+  let x=0,y=0,t=null;
+  const place=()=>{
+    if(t){const r=t.getBoundingClientRect();
+      vf.style.width=(r.width+16)+'px';vf.style.height=(r.height+16)+'px';
+      vf.style.transform='translate('+(r.left-8)+'px,'+(r.top-8)+'px)';
+    }else{
+      vf.style.width=vf.style.height='44px';
+      vf.style.transform='translate('+(x-22)+'px,'+(y-22)+'px)';
+    }
+  };
+  addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;vf.classList.add('on');place()});
+  document.addEventListener('mouseover',e=>{t=e.target.closest('[data-focus],a');vf.classList.toggle('lock',!!t);place()});
+  addEventListener('scroll',()=>{if(t)place()},{passive:true});
+  document.documentElement.addEventListener('mouseleave',()=>vf.classList.remove('on'));
+  addEventListener('click',()=>{fl.classList.remove('go');void fl.offsetWidth;fl.classList.add('go')});
+})();
+</script>
+<script>
+(()=>{
+  const desk=document.querySelector('.desk');let z=10;
+  desk.querySelectorAll('[data-drag]').forEach(el=>{
+    el.addEventListener('pointerdown',e=>{
+      e.preventDefault();el.setPointerCapture(e.pointerId);
+      const x0=el.offsetLeft,y0=el.offsetTop,px=e.clientX,py=e.clientY;
+      el.style.zIndex=++z;el.classList.add('held');
+      const move=ev=>{
+        const x=Math.max(0,Math.min(desk.clientWidth-el.offsetWidth,x0+ev.clientX-px));
+        const y=Math.max(0,Math.min(desk.clientHeight-el.offsetHeight,y0+ev.clientY-py));
+        el.style.left=x+'px';el.style.top=y+'px';
+      };
+      const up=()=>{el.classList.remove('held');el.removeEventListener('pointermove',move);el.removeEventListener('pointerup',up)};
+      el.addEventListener('pointermove',move);el.addEventListener('pointerup',up);
+    });
+  });
+})();
+</script>
+</body>
+</html>
