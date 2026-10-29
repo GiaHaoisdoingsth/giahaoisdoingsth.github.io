@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gia Hao | Social &amp; Content Marketing</title>
+<meta name="description" content="Gia Hao is a marketing fresher who plans, writes and shoots social content. Campaign experience across Facebook, TikTok and Instagram. Open to every industry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FEF1D6;--ink:#2A1A15;--butter:#E78B5A;--sky:#ADB87F;--ground:#F0D9A8;--cream:#FDE3AF;--red:#AE2929;
+--display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;--body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;font:400 1.0625rem/1.7 var(--body);color:var(--ink);background:var(--paper);overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);margin:0;letter-spacing:-.035em}
+[hidden]{display:none!important}
+.view{min-height:100svh;animation:rise .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.sec{padding:clamp(2.5rem,6vw,5rem) 0 clamp(4rem,8vw,7rem)}
+.tag{display:inline-block;margin-bottom:1rem;padding:.2rem .85rem;border:1.5px solid currentColor;border-radius:999px;font:600 .82rem var(--body)}
+.btn{display:inline-block;padding:.85rem 1.6rem;border:2px solid var(--ink);border-radius:999px;background:var(--ink);color:var(--paper);font:600 1rem var(--body);text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--red);border-color:var(--red);color:var(--paper)}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--paper)}
+.btn.red:hover{background:var(--ink);border-color:var(--ink)}
+.btn.alt{background:none;color:var(--ink)}
+.btn.alt:hover{background:var(--ink);color:var(--paper)}
+.awning{height:16px;background:repeating-linear-gradient(90deg,var(--ink) 0 36px,var(--butter) 36px 72px)}
+.logo{font:800 1.3rem var(--display);letter-spacing:-.03em;text-decoration:none}
+.h2{font-size:clamp(2.4rem,6vw,4.8rem);line-height:.95;margin-bottom:1rem}
+.lead{max-width:52ch;margin:0 0 2rem}
+
+/* counter bar */
+.bar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.7rem max(1.25rem,calc((100% - 1200px)/2));background:rgba(254,241,214,.92);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--ink);font-weight:500;font-size:.95rem}
+.bar ul{display:flex;gap:.3rem;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+.bar ul a,.back{padding:.3rem .8rem;border-radius:999px;text-decoration:none}
+.bar ul a:hover,.back:hover{background:rgba(42,26,21,.1)}
+.bar ul a[aria-current=page]{background:var(--ink);color:var(--paper)}
+.back{font-weight:600}
+
+/* stall front: the store is the hero, signage is the backdrop */
+.home{position:relative;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(var(--paper),#F7E6C0)}
+.home::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-img{position:absolute;inset:0 0 auto 0;height:55%;background:url(images/bg-hero.jpg) center/cover;opacity:.22}
+.top{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 0}
+.top .btn{padding:.45rem 1.1rem;font-size:.9rem}
+.home::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(42,26,21,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(42,26,21,.075) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 28%,#000 25%,transparent 78%);mask-image:radial-gradient(ellipse 70% 60% at 50% 28%,#000 25%,transparent 78%)}
+.intro{position:relative;z-index:4;padding:clamp(.6rem,2.5vh,1.6rem) 1.25rem clamp(1.2rem,3vh,2rem);text-align:center}
+.kicker{margin:0 0 .7rem;font-size:.95rem;font-weight:600}
+h1{max-width:15em;min-height:2.05em;margin:0 auto;font-size:clamp(2.1rem,4.2vw,3.6rem);line-height:1.02;font-weight:800}
+.typed{color:var(--red)}
+.caret{display:inline-block;width:3px;height:.85em;margin-left:4px;background:var(--red);vertical-align:-.08em;animation:blink 1s steps(2) infinite}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.blurb{max-width:56ch;margin:.7rem auto 0;font-size:1.05rem;line-height:1.5}
+.cta{display:flex;justify-content:center;flex-wrap:wrap;gap:.75rem;margin-top:1.2rem}
+.skyline{position:absolute;left:0;bottom:70px;width:100%;height:190px;opacity:.55;pointer-events:none}
+.stage{position:relative;z-index:3;display:grid;grid-template-columns:1fr minmax(0,820px) 1fr;align-items:end;gap:1.5rem;width:min(1380px,100% - 2rem);margin:auto auto 0}
+.ground{position:relative;z-index:3;height:70px;border-top:3px solid var(--ink);background:var(--ground)}
+.path{position:absolute;left:50%;top:0;bottom:0;width:6px;margin-left:-3px;background:repeating-linear-gradient(to bottom,var(--butter) 0 12px,transparent 12px 24px)}
+.path::before{content:"";position:absolute;left:-6px;top:-1px;border:9px solid transparent;border-bottom-color:var(--butter);border-top:0}
+
+.fascia{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 1.4rem;border-radius:10px 10px 0 0;background:var(--ink);color:var(--paper)}
+.fascia b{font:800 clamp(1.4rem,2.6vw,2.2rem)/1 var(--display);letter-spacing:-.03em;color:var(--butter)}
+.fascia span{font-size:.85rem;font-weight:500;text-align:right}
+.fascia i{display:inline-block;width:9px;height:9px;margin-right:.6rem;border-radius:50%;background:var(--butter);animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+.awn{height:52px;background:repeating-linear-gradient(90deg,var(--red) 0 40px,var(--cream) 40px 80px);-webkit-mask:linear-gradient(#000 0 0) top/100% 32px no-repeat,radial-gradient(circle at 20px 0,#000 20px,transparent 21px) bottom/40px 20px repeat-x;mask:linear-gradient(#000 0 0) top/100% 32px no-repeat,radial-gradient(circle at 20px 0,#000 20px,transparent 21px) bottom/40px 20px repeat-x}
+.bays{display:grid;grid-template-columns:1fr 1fr .72fr 1fr 1fr;gap:10px;margin-top:-20px;padding:30px 14px 0;background:var(--ink)}
+.win,.door{position:relative;display:block;aspect-ratio:3/4.3;overflow:hidden;border-radius:4px 4px 0 0;background:var(--img,none) center/cover,linear-gradient(170deg,#E8EDCF,var(--sky) 55%,#8E9A5E);color:var(--ink);text-decoration:none;transition:box-shadow .3s}
+.win::before,.door::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.5) 0 20%,transparent 20% 29%,rgba(255,255,255,.22) 29% 34%,transparent 34%)}
+.win::after{content:"";position:absolute;left:0;right:0;bottom:36%;height:5px;background:var(--ink);opacity:.4}
+.win:hover,.win:focus-visible,.door:hover,.door:focus-visible{box-shadow:inset 0 0 0 4px var(--butter),0 0 34px rgba(231,139,90,.75)}
+.obj{position:absolute;left:50%;bottom:calc(36% + 5px);width:56%;transform:translateX(-50%);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.win:hover .obj,.win:focus-visible .obj{transform:translateX(-50%) translateY(-9px)}
+.plq{position:absolute;left:0;right:0;bottom:0;height:36%;padding:.45rem .6rem;border-top:3px solid var(--ink);background:var(--paper)}
+.plq small{display:block;font:600 .64rem var(--body);opacity:.7}
+.plq b{display:block;font:800 clamp(1rem,1.5vw,1.25rem)/1.1 var(--display);letter-spacing:-.03em}
+.plq em{display:block;font:500 .68rem/1.25 var(--body);font-style:normal}
+.door .open{position:absolute;left:50%;top:18%;padding:.2rem .8rem;border:2px solid var(--ink);border-radius:6px;background:var(--butter);font:800 .85rem var(--display);transform:translateX(-50%) rotate(-3deg)}
+.door .handle{position:absolute;right:14%;top:44%;width:5px;height:18%;border-radius:3px;background:var(--ink)}
+
+.totem{position:relative;width:158px;margin-bottom:40px;padding:.8rem .9rem 1rem;border:3px solid var(--ink);border-radius:10px;background:var(--sky);color:var(--ink)}
+.totem::after{content:"";position:absolute;left:50%;top:100%;width:8px;height:42px;margin-left:-4px;background:var(--ink)}
+.totem.tleft{justify-self:end}.totem.tright{justify-self:start}
+.totem h2{margin:0 0 .5rem;padding-bottom:.4rem;border-bottom:2px solid var(--ink);font:700 .72rem var(--body);letter-spacing:0}
+.totem div+div{margin-top:.75rem}
+.totem b{display:block;font:800 1.95rem/1 var(--display);letter-spacing:-.03em}
+.totem span{display:block;font-size:.72rem;line-height:1.3}
+.facts{display:none;justify-content:center;flex-wrap:wrap;gap:1rem 2rem;padding:1.25rem}
+.facts b{display:block;font:800 1.8rem/1 var(--display);letter-spacing:-.03em}
+.facts span{font-size:.8rem}
+
+/* counter intro (shared) */
+.cintro{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.cintro .lead{margin:0}
+.hint{padding:.5rem 1.1rem;border:2px solid var(--ink);border-radius:999px;background:var(--paper);font:700 .9rem var(--body)}
+
+/* counter 1: CDs */
+.cds{background:var(--cream)}
+.np{display:grid;grid-template-columns:minmax(280px,440px) 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.cd-wrap{position:relative;width:min(420px,78vw);aspect-ratio:1;margin:1.5rem auto}
+.disc{position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--paper),var(--sky),#fff,var(--paper),var(--sky),#fff,var(--paper));box-shadow:0 22px 40px rgba(42,26,21,.25);animation:spin 20s linear infinite}
+.disc::after{content:"";position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(42,26,21,.2)}
+.cd-wrap:hover .disc{animation-duration:6s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.label{position:absolute;inset:25%;display:grid;place-items:center;overflow:hidden;border:6px solid var(--paper);border-radius:50%;background:var(--ink);color:var(--paper);font:800 2.6rem var(--display)}
+.label img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hp{position:absolute;inset:-9%;width:118%;height:118%;pointer-events:none;z-index:3}
+.nt{position:absolute;color:var(--ink);font:700 2.2rem/1 system-ui,sans-serif;animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(8deg)}}
+.eyebrow{display:flex;align-items:center;gap:.8rem;font:700 .9rem var(--body)}
+.eq{display:inline-flex;align-items:flex-end;gap:3px;height:20px}
+.eq i{width:4px;height:100%;background:var(--ink);transform-origin:bottom;animation:eq 1s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:-.2s}.eq i:nth-child(3){animation-delay:-.45s}.eq i:nth-child(4){animation-delay:-.7s}.eq i:nth-child(5){animation-delay:-.1s}
+@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.big{margin:.9rem 0 1.1rem;font:800 clamp(2.3rem,4.8vw,4rem)/1 var(--display);letter-spacing:-.04em}
+mark{background:linear-gradient(transparent 58%,var(--paper) 58%);color:inherit;padding:0 .08em}
+.sub{max-width:56ch;margin:0 0 1.25rem;font-size:1.12rem}
+.tr{margin:0 0 1rem;padding-left:1rem;border-left:3px solid var(--ink)}
+.tr small{display:block;font:700 .78rem var(--body);opacity:.7}
+.tr p{margin:.1rem 0 0;max-width:58ch}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 0}
+.chips span{padding:.2rem .8rem;border:1.5px solid currentColor;border-radius:999px;font-size:.83rem;font-weight:600}
+.deck2{display:flex;justify-content:center;align-items:flex-end;gap:3rem;flex-wrap:wrap;margin-top:3.5rem}
+.rackbox{display:flex;align-items:flex-end;gap:2.25rem;max-width:100%;overflow-x:auto;padding:0 1.5rem;border-bottom:10px solid var(--ink);box-shadow:0 18px 20px -16px rgba(42,26,21,.5)}
+.grp{display:flex;flex-direction:column;flex:none}
+.grp h3{margin:0 0 1.6rem;font-size:1.3rem}
+.cdshelf{display:flex;align-items:flex-end;gap:5px}
+.cdbox{writing-mode:vertical-rl;display:flex;flex:none;align-items:center;justify-content:space-between;width:50px;height:var(--h);padding:.9rem 0;border:0;border-top:12px solid var(--ink);border-bottom:12px solid var(--ink);background:var(--c);color:var(--tc);font:inherit;text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.cdbox:hover,.cdbox:focus-visible,.cdbox[aria-pressed=true]{transform:translateY(-14px)}
+.cdbox b{font:700 1rem/1 var(--body)}
+.cdbox span{font-size:.72rem;opacity:.8}
+.mp3{width:min(340px,100%);padding:1.1rem 1.1rem 1.3rem;border-radius:22px;background:var(--ink);color:var(--paper);box-shadow:0 18px 30px rgba(42,26,21,.3)}
+.screen{min-height:130px;padding:.8rem .9rem;border-radius:10px;background:var(--sky);color:var(--ink)}
+.screen small{display:block;font:600 .72rem var(--body)}
+.screen b{display:block;margin:.2rem 0;font:800 1.25rem/1.1 var(--display);letter-spacing:-.02em}
+.screen p{margin:.3rem 0 0;font-size:.82rem;line-height:1.4}
+.screen iframe{display:block;width:100%;height:80px;margin-top:.6rem;border:0;border-radius:10px}
+.ctl{display:flex;justify-content:center;gap:1rem;margin-top:1rem}
+.ctl button{width:48px;height:48px;border:0;border-radius:50%;background:var(--paper);color:var(--ink);font:700 1.3rem var(--body);cursor:pointer}
+.ctl button:hover{background:var(--butter)}
+
+/* counter 2: books */
+.books-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(260px,1fr);gap:2.5rem;align-items:start}
+.bcase{padding:.5rem 1.25rem 0;border:6px solid var(--ink);border-radius:12px 12px 0 0;background:#F7E6C0}
+.bshelf{padding-top:1rem}
+.bshelf h3{margin:0;font-size:1.1rem}
+.scroll{overflow-x:auto;padding-top:1.7rem}
+.row{display:flex;align-items:flex-end;gap:8px;min-width:max-content;min-height:370px;padding:0 .5rem;border-bottom:10px solid var(--ink)}
+.book{writing-mode:vertical-rl;display:flex;flex:none;justify-content:space-between;align-items:center;width:var(--w);height:var(--h);padding:1.1rem 0;border:0;border-radius:3px 3px 0 0;background:var(--c);color:var(--tc);box-shadow:inset 0 0 0 2px var(--ink);font:inherit;cursor:pointer;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.book:hover,.book:focus-visible{transform:translateY(-22px) rotate(-2deg)}
+.book b{font:800 1.15rem/1 var(--display);letter-spacing:-.02em}
+.book span{font-size:.7rem;font-weight:600;opacity:.85}
+.book.soon{background:none;box-shadow:none;border:2px dashed rgba(42,26,21,.45);border-bottom:0}
+.picks{position:sticky;top:5rem;padding:1.5rem;border:2px solid var(--ink);border-radius:14px;background:var(--cream)}
+.picks h3{font-size:1.7rem}
+.picks p{margin:.3rem 0 1rem;font-size:.95rem}
+.picks ul{list-style:none;margin:0;padding:0}
+.picks li+li{border-top:1.5px solid rgba(42,26,21,.35)}
+.picks button{display:flex;align-items:baseline;gap:.9rem;width:100%;padding:.85rem 0;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.picks button:hover span{text-decoration:underline}
+.picks b{flex:none;min-width:5.4rem;font:800 1.6rem/1 var(--display);letter-spacing:-.03em}
+.picks span{font-size:.88rem;line-height:1.3}
+.picks small{display:block;opacity:.7}
+
+dialog{width:min(1020px,95vw);padding:0;border:0;border-radius:16px;overflow:hidden;background:var(--paper);color:var(--ink)}
+dialog::backdrop{background:rgba(42,26,21,.7)}
+dialog[open]{animation:pull .55s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pull{from{opacity:0;transform:translateY(90px) scale(.82) rotate(-4deg)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.rd{display:grid;grid-template-columns:minmax(220px,290px) 1fr;height:min(700px,88vh)}
+.rd-side{display:flex;flex-direction:column;gap:1.25rem;padding:1.75rem;overflow-y:auto;background:var(--c);color:var(--tc)}
+.rd-side h3{font-size:clamp(1.7rem,3vw,2.4rem);line-height:.95}
+.rd-side p{margin:.4rem 0 0;font-size:.9rem}
+.toc{margin-top:auto}
+.toc button{display:block;width:100%;padding:.5rem 0;border:0;border-bottom:1.5px solid currentColor;background:none;color:inherit;font:500 .88rem/1.3 var(--body);text-align:left;opacity:.7;cursor:pointer}
+.toc button[aria-current=true]{opacity:1;font-weight:800}
+.rd-main{display:flex;flex-direction:column;min-height:0;perspective:1800px;box-shadow:inset 16px 0 18px -16px rgba(42,26,21,.4)}
+.pg{flex:1;min-height:0;overflow-y:auto;padding:clamp(1.5rem,4vw,2.5rem);transform-origin:left center;background:var(--paper)}
+.pg .k{margin:0 0 .4rem;font:700 .8rem var(--body);opacity:.7}
+.pg h3{margin-bottom:.8rem;font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1}
+.pg p{margin:0 0 1rem;max-width:58ch}
+.pg h4{margin:1.5rem 0 .6rem;font:800 1rem var(--display)}
+.pg ul{margin:0;padding-left:1.2rem}
+.pg li{margin-bottom:.35rem}
+.pg .chips{margin:1rem 0 1.25rem}
+.res{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:.7rem}
+.res div{padding:.85rem;border-radius:10px;background:var(--cream)}
+.res b{display:block;font:800 1.55rem/1 var(--display);letter-spacing:-.03em}
+.res span{display:block;margin-top:.3rem;font-size:.78rem;line-height:1.3}
+.contents{list-style:none;margin:0;padding:0}
+.contents button{display:flex;gap:1rem;width:100%;padding:.75rem 0;border:0;border-bottom:1.5px solid rgba(42,26,21,.25);background:none;color:inherit;font:600 1rem var(--body);text-align:left;cursor:pointer}
+.contents button:hover{background:rgba(231,139,90,.35)}
+.contents b{flex:none;width:1.6rem;font-family:var(--display)}
+.work{margin-top:1.25rem;padding:1rem 1.1rem 1.1rem;border:1.5px solid rgba(42,26,21,.35);border-radius:12px}
+.work h4{margin:0 0 .3rem;font-size:1.15rem}
+.work>p{font-size:.95rem}
+.note{font-size:.88rem;opacity:.65}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem}
+.pcard{overflow:hidden;border:1.5px solid var(--ink);border-radius:10px;background:#fff}
+.pcard .im{position:relative;aspect-ratio:4/5;border-bottom:1.5px solid var(--ink);background:rgba(42,26,21,.06)}
+.pcard .im:empty::after{content:"Image";position:absolute;inset:0;display:grid;place-items:center;font-size:.8rem;opacity:.45}
+.pcard .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pcard p{margin:0;padding:.6rem .7rem;font-size:.82rem;line-height:1.35}
+.pcard small{display:block;opacity:.65}
+.rd-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem clamp(1.5rem,4vw,2.5rem);border-top:1.5px solid rgba(42,26,21,.2)}
+.rd-nav .btn{padding:.55rem 1.2rem;font-size:.9rem}
+.rd-nav .btn:disabled{opacity:.3;cursor:default}
+.rd-nav .btn:disabled:hover{background:var(--ink);color:var(--paper)}
+.rd-nav span{font-size:.85rem;opacity:.7}
+
+/* counter 3: film */
+.film{background:var(--sky)}
+.cam-sec{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:2.5rem;align-items:center;margin:1rem 0 1.5rem}
+.cam{position:relative;width:min(340px,100%);margin:0 auto}
+.cam svg{display:block;width:100%}
+.cam::after{content:"";position:absolute;inset:0;border-radius:20px;background:#fff;opacity:0;pointer-events:none}
+.cam.fire::after{animation:fl .35s ease-out}
+@keyframes fl{from{opacity:.9}to{opacity:0}}
+.shutter{position:absolute;left:65%;top:13%;width:17%;height:9%;border:2px solid var(--ink);border-radius:6px;background:var(--butter);cursor:pointer}
+.shutter:active{transform:translateY(2px)}
+.camctl{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem;flex-wrap:wrap}
+.cnt{font-weight:600}
+.wall{display:flex;flex-wrap:wrap;gap:1.1rem;align-content:flex-start;min-height:200px}
+.wall .empty{align-self:center;max-width:30ch;opacity:.7}
+.pol{width:150px;padding:9px 9px 11px;background:#fff;rotate:var(--r);box-shadow:0 8px 16px rgba(42,26,21,.25);animation:drop .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(-50px) scale(.85)}to{opacity:1;transform:none}}
+.pol .n{display:grid;place-items:center;aspect-ratio:1;background:var(--ink);color:var(--butter);font:800 1.55rem/1 var(--display);letter-spacing:-.03em;text-align:center;padding:.3rem}
+.pol p{margin:.5rem 0 0;font-size:.74rem;line-height:1.3}
+.roll{margin-top:2.25rem}
+.roll h3{font-size:1.5rem}
+.strip{margin-top:.9rem;overflow-x:auto}
+.reel{position:relative;display:flex;gap:10px;min-width:max-content;padding:34px 16px;background:var(--ink)}
+.reel::before,.reel::after{content:"";position:absolute;left:0;right:0;height:10px;background:repeating-linear-gradient(90deg,var(--sky) 0 14px,transparent 14px 30px)}
+.reel::before{top:10px}.reel::after{bottom:10px}
+.frame{flex:none;width:240px;margin:0;color:var(--paper)}
+.ph{position:relative;aspect-ratio:3/2;border-radius:3px;overflow:hidden;background:rgba(254,241,214,.12)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph b{position:absolute;left:.7rem;bottom:.5rem;font:800 1.7rem/1 var(--display);letter-spacing:-.03em;color:var(--butter);text-shadow:0 1px 8px rgba(42,26,21,.7)}
+.frame figcaption{margin-top:.5rem;font-size:.82rem;line-height:1.3}
+.frame time{display:block;opacity:.7}
+
+/* counter 4: games */
+.games{background:var(--ink);color:var(--paper)}
+.rack{display:flex;flex-wrap:wrap;align-items:flex-end;gap:1.5rem;padding:2rem 0 1.25rem;border-bottom:10px solid var(--sky)}
+.case{display:flex;flex-direction:column;justify-content:space-between;padding:1rem;color:var(--ink)}
+.case b{font:800 1.5rem/1 var(--display);letter-spacing:-.03em}
+.case span{font-size:.8rem;font-weight:600}
+.case.disc{width:150px;height:200px;background:var(--sky);border-top:18px solid var(--paper);border-radius:6px}
+.case.cart{width:128px;height:128px;background:var(--butter);clip-path:polygon(0 0,100% 0,100% 84%,88% 100%,12% 100%,0 84%);padding-bottom:1.4rem}
+.load{width:min(420px,100%);height:12px;margin-top:1.75rem;border:2px solid var(--paper);border-radius:999px;overflow:hidden}
+.load i{display:block;height:100%;width:62%;background:var(--butter);animation:fill 3s ease-in-out infinite alternate}
+@keyframes fill{from{width:18%}to{width:82%}}
+
+/* checkout */
+.checkout{background:var(--cream)}
+.checkout .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+.receipt{max-width:420px;margin-left:auto;padding:1.75rem 1.5rem;background:var(--paper);font:400 .92rem/1.8 ui-monospace,"SF Mono",Menlo,Consolas,monospace;transform:rotate(1.5deg);box-shadow:0 18px 30px rgba(42,26,21,.22)}
+.receipt h3{font:700 1.05rem var(--display);letter-spacing:0;text-align:center}
+.receipt hr{border:0;border-top:2px dashed var(--ink);margin:.8rem 0}
+.r{display:flex;justify-content:space-between;gap:1rem}
+.r a{overflow-wrap:anywhere;text-align:right}
+.bars{height:36px;margin-top:1rem;background:repeating-linear-gradient(90deg,var(--ink) 0 3px,transparent 3px 6px,var(--ink) 6px 7px,transparent 7px 12px)}
+footer{padding:1.25rem 0;font-size:.85rem;opacity:.8}
+
+@media (max-width:1100px){
+  .stage{grid-template-columns:minmax(0,820px);justify-content:center}
+  .totem{display:none}
+  .facts{display:flex}
+}
+@media (max-width:860px){
+  .np,.books-grid,.cam-sec,.checkout .grid{grid-template-columns:1fr}
+  .rd{grid-template-columns:1fr;height:min(720px,90vh)}.rd-side{max-height:36%}
+  .picks{position:static}
+  .receipt{margin:0 auto}
+  .back{padding-inline:.5rem}.bar ul a{padding:.3rem .5rem}
+}
+@media (max-width:700px){
+  .bays{grid-template-columns:1fr 1fr}
+  .door{grid-column:1/-1;aspect-ratio:auto;min-height:120px;border-radius:4px}
+  .fascia{flex-direction:column;align-items:flex-start;gap:.3rem}.fascia span{text-align:left}
+  .skyline{display:none}
+}
+@media (prefers-reduced-motion:reduce){.view,dialog[open],.pol{animation:none}.disc,.nt,.load i,.sign i{animation:none}}
+</style>
+</head>
+<body>
+<div class="awning" aria-hidden="true"></div>
+
+<nav class="bar" id="bar" aria-label="Counters" hidden>
+  <a class="back" href="#home">← The stall</a>
+  <ul>
+    <li><a href="#cds">CDs</a></li><li><a href="#books">Books</a></li><li><a href="#film">Film</a></li><li><a href="#games">Games</a></li><li><a href="#checkout">Checkout</a></li>
+  </ul>
+</nav>
+
+<main>
+<!-- MẶT TIỀN GIAN HÀNG: cửa hàng là nhân vật chính -->
+<section class="view home" id="home">
+  <div class="hero-img" aria-hidden="true"></div><!-- ảnh nền bầu trời: images/bg-hero.jpg -->
+  <div class="wrap"><div class="top"><a class="logo" href="#home">Gia Hao</a><a class="btn" href="#checkout">Say hello</a></div></div>
+  <div class="intro">
+    <p class="kicker">Gia Hao pop-up store · now open</p>
+    <h1><span class="sr">Hi, I’m Gia Hao, a marketing fresher focused on social media and content.</span><span aria-hidden="true">Hi, I’m Gia Hao,<br>a <span class="typed" id="typed"></span><i class="caret"></i></span></h1>
+    <p class="blurb">I plan, write and shoot social content, and I’m open to every industry.</p>
+    <div class="cta"><a class="btn red" href="#books">View portfolio</a><a class="btn alt" href="#checkout">Contact</a></div>
+  </div>
+  <svg class="skyline" viewBox="0 0 1500 190" preserveAspectRatio="none" aria-hidden="true"><g fill="#ADB87F"><rect x="20" y="80" width="90" height="110"/><rect x="120" y="40" width="70" height="150"/><rect x="200" y="100" width="100" height="90"/><rect x="310" y="50" width="80" height="140"/><rect x="400" y="90" width="110" height="100"/><rect x="520" y="30" width="70" height="160"/><rect x="600" y="70" width="90" height="120"/><rect x="1190" y="60" width="90" height="130"/><rect x="1290" y="30" width="70" height="160"/><rect x="1370" y="90" width="110" height="100"/><rect x="1490" y="100" width="10" height="90"/></g></svg>
+
+  <div class="stage">
+    <aside class="totem tleft" aria-label="Highlights">
+      <h2>Directory · reach</h2>
+      <div><b>5M+</b><span>youths reached<br>Unilever × F75 campaign</span></div>
+      <div><b>300K+</b><span>reach on a festival of<br>1,000+ people</span></div>
+    </aside>
+
+    <div class="store">
+      <div class="fascia"><div><i></i><b>GIA HAO</b></div><span>Pop-up store · now open<br>Free to browse</span></div>
+      <div class="awn" aria-hidden="true"></div>
+      <!-- ảnh trong từng ô kính: images/win-cds.jpg, win-books.jpg, win-film.jpg, win-games.jpg -->
+      <div class="bays">
+        <a class="win" href="#cds" style="--img:url(images/win-cds.jpg)">
+          <svg class="obj" viewBox="0 0 60 60" aria-hidden="true"><defs><linearGradient id="cdg"><stop offset="0" stop-color="#FEF1D6"/><stop offset=".5" stop-color="#ADB87F"/><stop offset="1" stop-color="#E78B5A"/></linearGradient></defs><circle cx="30" cy="30" r="27" fill="url(#cdg)" stroke="#2A1A15" stroke-width="2.5"/><circle cx="30" cy="30" r="9" fill="#FEF1D6" stroke="#2A1A15" stroke-width="2.5"/><circle cx="30" cy="30" r="3" fill="#2A1A15"/></svg>
+          <span class="plq"><small>Counter 1</small><b>CDs</b><em>Music &amp; liner notes</em></span>
+        </a>
+        <a class="win" href="#books" style="--img:url(images/win-books.jpg)">
+          <svg class="obj" viewBox="0 0 60 60" aria-hidden="true"><g stroke="#2A1A15" stroke-width="2.5"><rect x="8" y="18" width="12" height="40" fill="#E78B5A"/><rect x="22" y="6" width="13" height="52" fill="#2A1A15"/><rect x="37" y="22" width="13" height="36" fill="#FEF1D6"/></g></svg>
+          <span class="plq"><small>Counter 2</small><b>Books</b><em>Stories from every job</em></span>
+        </a>
+        <a class="door" href="#checkout">
+          <span class="open">OPEN</span><span class="handle" aria-hidden="true"></span>
+          <span class="plq"><small>Entrance</small><b>Come in</b><em>Say hello</em></span>
+        </a>
+        <a class="win" href="#film" style="--img:url(images/win-film.jpg)">
+          <svg class="obj" viewBox="0 0 60 60" aria-hidden="true"><g stroke="#2A1A15" stroke-width="2.5"><rect x="5" y="20" width="50" height="34" rx="5" fill="#2A1A15"/><rect x="20" y="12" width="20" height="9" rx="2" fill="#2A1A15"/><circle cx="30" cy="37" r="11" fill="#FEF1D6"/><circle cx="30" cy="37" r="5" fill="#ADB87F"/></g></svg>
+          <span class="plq"><small>Counter 3</small><b>Film</b><em>Shoots, events, numbers</em></span>
+        </a>
+        <a class="win" href="#games" style="--img:url(images/win-games.jpg)">
+          <svg class="obj" viewBox="0 0 60 60" aria-hidden="true"><g stroke="#2A1A15" stroke-width="2.5"><path d="M10 6h40v38l-6 10H16L10 44z" fill="#E78B5A"/><rect x="17" y="12" width="26" height="18" rx="2" fill="#FEF1D6"/></g></svg>
+          <span class="plq"><small>Counter 4</small><b>Games</b><em>Design &amp; writing, loading</em></span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="totem tright" aria-label="Highlights">
+      <h2>Directory · people</h2>
+      <div><b>3,300+</b><span>young people engaged<br>in one campaign</span></div>
+      <div><b>11+</b><span>corporate partners<br>managed, 80M+ VND budget</span></div>
+    </aside>
+  </div>
+
+  <div class="facts" aria-label="Highlights">
+    <div><b>5M+</b><span>youths reached</span></div><div><b>3,300+</b><span>young people engaged</span></div><div><b>300K+</b><span>festival reach</span></div><div><b>11+</b><span>corporate partners</span></div>
+  </div>
+  <div class="ground"><div class="path" aria-hidden="true"></div></div>
+</section>
+
+<!-- QUẦY 1: CDs -->
+<section class="view cds" id="cds" hidden>
+  <div class="wrap sec">
+    <div class="cintro">
+      <div><span class="tag">Counter 1 · CDs</span><h2 class="h2">Press play.</h2><p class="lead">Put your headphones on and listen to a few gentle notes about me first. Then browse the CDs on the rack.</p></div>
+      <span class="hint">♪ Headphones on</span>
+    </div>
+    <div class="np">
+      <div class="cd-wrap">
+        <div class="disc"></div>
+        <div class="label"><span>GH</span><!-- ảnh của bạn: images/gia-hao.jpg --><img src="images/gia-hao.jpg" alt="Portrait of Gia Hao" onerror="this.remove()"></div>
+        <svg class="hp" viewBox="0 0 100 100" aria-hidden="true"><path d="M7 58C7-8 93-8 93 58" fill="none" stroke="#2A1A15" stroke-width="2.6" stroke-linecap="round"/><rect x="1.5" y="46" width="11" height="24" rx="5" fill="#FEF1D6" stroke="#2A1A15" stroke-width="2"/><rect x="87.5" y="46" width="11" height="24" rx="5" fill="#FEF1D6" stroke="#2A1A15" stroke-width="2"/></svg>
+        <span class="nt" style="top:2%;left:-6%" aria-hidden="true">♪</span>
+        <span class="nt" style="top:30%;right:-10%;animation-delay:-1.3s" aria-hidden="true">♫</span>
+        <span class="nt" style="bottom:4%;left:-3%;animation-delay:-2.4s" aria-hidden="true">♫</span>
+        <span class="nt" style="bottom:-2%;right:6%;animation-delay:-.7s" aria-hidden="true">♪</span>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>Now playing · Track 01 · Hello</p>
+        <p class="big">I turn briefs into <mark>stories</mark> people show up for.</p>
+        <p class="sub">Hi, I’m Gia Hao, a creative storyteller and marketing graduate with a strong pulse on digital culture. I started in social media: planning content, shooting, writing, and watching closely what makes people stop scrolling.</p>
+        <div class="tr"><small>Track 02 · On the record</small><p>Since 2022 I’ve worked across student communications, partnerships, events and brand content, from short-form videos for a coffee brand to a campaign that reached over five million young people. I make social-first content end to end for TikTok, Threads, Facebook and Instagram.</p></div>
+        <div class="tr"><small>Track 03 · Why not?</small><p>I’m still early in my story, curious about everything, and open to every industry. If you have a brief that sounds a little unusual, I’d love to hear it.</p></div>
+        <div class="chips"><span>Bachelor of Marketing, UEH · GPA 3.8/4.0</span><span>IELTS Academic 6.5</span><span>Journalism &amp; Media Skills Certificate</span></div>
+        <div class="chips"><span>Notion</span><span>Canva</span><span>CapCut</span><span>Google Workspace</span></div>
+      </div>
+    </div>
+    <div class="deck2">
+      <div class="rackbox">
+        <div class="grp"><h3>Find me on</h3><div class="cdshelf" id="cdLinks"></div></div>
+        <div class="grp"><h3>Pick a track</h3><div class="cdshelf" id="cdSongs"></div></div>
+      </div>
+      <div class="mp3">
+        <div class="screen" aria-live="polite"><small>Now playing</small><b id="scT">Pick a CD</b><small id="scA">Press a spine on the rack</small><p id="scP"></p><div id="scF"></div></div>
+        <div class="ctl"><button type="button" id="mpPrev" aria-label="Previous track">‹</button><button type="button" id="mpNext" aria-label="Next track">›</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUẦY 2: Books -->
+<section class="view" id="books" hidden>
+  <div class="wrap sec">
+    <div class="cintro">
+      <div><span class="tag">Counter 2 · Books</span><h2 class="h2">Turn the pages.</h2><p class="lead">Every book is one company I’ve worked with. Open one and read the chapters I’ve written there: the company first, then each role, with the work behind it.</p></div>
+      <span class="hint">Pull a book off the shelf</span>
+    </div>
+    <div class="books-grid">
+      <div class="bcase" id="shelves"></div>
+      <aside class="picks"><h3>Staff picks</h3><p>Short on time? Start with these.</p><ul id="picksList"></ul></aside>
+    </div>
+  </div>
+</section>
+
+<!-- QUẦY 3: Film -->
+<section class="view film" id="film" hidden>
+  <div class="wrap sec">
+    <div class="cintro">
+      <div><span class="tag">Counter 3 · Film</span><h2 class="h2">Develop the roll.</h2><p class="lead">Press the shutter to see the numbers I’m proudest of, then scroll the rolls to see the work behind each skill.</p></div>
+      <span class="hint">Press the shutter ▸</span>
+    </div>
+    <div class="cam-sec">
+      <div>
+        <div class="cam" id="cam">
+          <svg viewBox="0 0 300 190" aria-hidden="true"><rect x="10" y="40" width="280" height="140" rx="20" fill="#2A1A15"/><rect x="190" y="22" width="60" height="24" rx="6" fill="#2A1A15"/><rect x="40" y="58" width="36" height="16" rx="4" fill="#E78B5A"/><circle cx="130" cy="118" r="50" fill="#FEF1D6"/><circle cx="130" cy="118" r="38" fill="#2A1A15"/><circle cx="130" cy="118" r="24" fill="#ADB87F"/><circle cx="130" cy="118" r="8" fill="#2A1A15"/><circle cx="258" cy="66" r="6" fill="#FEF1D6"/></svg>
+          <button class="shutter" type="button" id="shutter" aria-label="Take a photo"></button>
+        </div>
+        <div class="camctl"><button class="btn" type="button" id="shoot">Take a photo</button><button class="btn alt" type="button" id="rewind" hidden>Rewind the film</button><span class="cnt" id="cnt"></span></div>
+      </div>
+      <div class="wall" id="wall" aria-live="polite"><p class="empty">Press the shutter. Every photo develops into a number I’m proud of.</p></div>
+    </div>
+    <div id="rolls"></div>
+  </div>
+</section>
+
+<!-- QUẦY 4: Games, thiết kế và nội dung tự viết -->
+<section class="view games" id="games" hidden>
+  <div class="wrap sec">
+    <div class="cintro">
+      <div><span class="tag">Counter 4 · Games</span><h2 class="h2">Insert a disc.</h2><p class="lead">Design projects and things I write for myself are loading. New discs and cartridges land here as I finish them.</p></div>
+      <span class="hint">Loading…</span>
+    </div>
+    <div class="rack" id="rack"></div>
+    <div class="load" role="img" aria-label="Loading"><i></i></div>
+  </div>
+</section>
+
+<!-- THANH TOÁN: liên hệ -->
+<section class="view checkout" id="checkout" hidden>
+  <div class="wrap sec grid">
+    <div>
+      <span class="tag">Checkout</span>
+      <h2 class="h2">Thanks for stopping by.</h2>
+      <p class="lead">The stall is open to every industry. If one of these stories sounds like what you need, let’s talk.</p>
+      <a class="btn" href="mailto:truonggiahao2004.contact@gmail.com">Email me</a>
+    </div>
+    <div class="receipt">
+      <h3>GIA HAO POP-UP</h3>
+      <div style="text-align:center">Social &amp; content marketing</div>
+      <hr>
+      <div class="r"><span>1 × Conversation</span><span>free</span></div>
+      <hr>
+      <div class="r"><span>Email</span><a href="mailto:truonggiahao2004.contact@gmail.com">truonggiahao2004.contact@gmail.com</a></div>
+      <div class="r"><span>Phone</span><a href="tel:+84766983539">+84 766 983 539</a></div>
+      <div class="r"><span>Where</span><span>Binh Phu ward, Ho Chi Minh</span></div>
+      <hr>
+      <div style="text-align:center">THANK YOU, COME AGAIN</div>
+      <div class="bars" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Copyright © 2026, Gia Hao</div></footer>
+
+<dialog id="book" aria-labelledby="rdT">
+  <div class="rd">
+    <div class="rd-side" id="rdSide">
+      <div><small id="rdShelf"></small><h3 id="rdT"></h3><p id="rdS"></p><p id="rdW"></p></div>
+      <div class="toc" id="toc"></div>
+      <button class="btn alt" id="rdClose" type="button" style="border-color:currentColor;color:inherit">Back to the shelf</button>
+    </div>
+    <div class="rd-main">
+      <div class="pg" id="pg"></div>
+      <div class="rd-nav"><button class="btn" id="rdPrev" type="button">← Previous</button><span id="rdNo"></span><button class="btn" id="rdNext" type="button">Next page →</button></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(()=>{
+  const $=id=>document.getElementById(id);
+  const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+  const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const INK="#2A1A15",PAPER="#FEF1D6",BUT="#E78B5A",SKY="#ADB87F";
+
+  /* ĐIỀU HƯỚNG: bấm vào quầy nào thì quầy đó mới mở (địa chỉ dạng #books) */
+  const VIEWS=['cds','books','film','games','checkout'];
+  const route=()=>{
+    const h=location.hash.slice(1),v=VIEWS.includes(h)?h:'home';
+    document.querySelectorAll('.view').forEach(s=>{s.hidden=s.id!==v});
+    $('bar').hidden=v==='home';
+    document.querySelectorAll('#bar ul a').forEach(a=>{a.getAttribute('href')==='#'+v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+    scrollTo(0,0);
+  };
+  addEventListener('hashchange',route);route();
+
+  /* ===== QUẦY CDs: kệ link (gáy đĩa) + kệ nhạc + máy MP3 ===== */
+  const CDC=[[PAPER,INK],[SKY,INK],[INK,PAPER],[PAPER,INK]];
+  const spine=(tag,t,sub,i)=>{
+    const e=el(tag,'cdbox');e.style.cssText='--c:'+CDC[i%4][0]+';--tc:'+CDC[i%4][1]+';--h:'+(235+(i*23)%46)+'px';
+    e.append(el('b',null,t),el('span',null,sub));return e;
+  };
+  /* Thay # bằng link thật của bạn */
+  const LINKS=[["Facebook","Posts & updates","#"],["Instagram","Behind the scenes","#"],["LinkedIn","Work history","#"],["Email","Write to me","mailto:truonggiahao2004.contact@gmail.com"]];
+  LINKS.forEach((l,i)=>{const a=spine('a',l[0],l[1],i);a.href=l[2];$('cdLinks').append(a)});
+  /* BÀI NHẠC: dán link nhúng Spotify (https://open.spotify.com/embed/track/…) hoặc YouTube (https://www.youtube.com/embed/…) vào embed */
+  const SONGS=[
+    {t:"Song 01",a:"Artist",embed:"",note:"Your first pick goes here."},
+    {t:"Song 02",a:"Artist",embed:"",note:"Your second pick goes here."},
+    {t:"Song 03",a:"Artist",embed:"",note:"Your third pick goes here."},
+    {t:"Song 04",a:"Artist",embed:"",note:"Your fourth pick goes here."}
+  ];
+  let cur=-1;
+  const play=i=>{
+    cur=(i+SONGS.length)%SONGS.length;const o=SONGS[cur];
+    $('cdSongs').querySelectorAll('.cdbox').forEach((b,k)=>b.setAttribute('aria-pressed',k===cur));
+    $('scT').textContent=o.t;$('scA').textContent=o.a;$('scP').textContent=o.embed?'':o.note;
+    $('scF').innerHTML='';
+    if(o.embed){const f=document.createElement('iframe');f.src=o.embed;f.loading='lazy';f.allow='autoplay; encrypted-media';f.title=o.t;$('scF').append(f)}
+  };
+  SONGS.forEach((o,i)=>{const b=spine('button',o.t,o.a,i+1);b.type='button';b.onclick=()=>play(i);$('cdSongs').append(b)});
+  $('mpPrev').onclick=()=>play(cur<0?0:cur-1);
+  $('mpNext').onclick=()=>play(cur+1);
+
+  /* ===== QUẦY SÁCH: mỗi cuốn là một công ty =====
+     Chương 1 luôn là "The company" (intro, facts). Các chương sau mang tên VỊ TRÍ của bạn.
+     Trong chương: tasks (việc đã làm), st (số liệu), works (dự án con, mỗi dự án có tasks/st/posts), posts (bài viết).
+     Bài viết: [caption, tên file ảnh trong images/stories/, ghi chú]. Chưa có thì để trống.
+     sh: kệ · sp: tên trên gáy · sr: vai trò trên gáy · c,k: màu gáy, màu chữ · w,h: độ dày, độ cao
+     hl: [số, nhãn, số chương] cho khung Staff picks */
+  const SHELVES=["Working experience","Activities","School & personal projects"];
+  const BOOKS=[
+   {sh:0,t:"La Viet Coffee",sp:"La Viet Coffee",sr:"Content Creator",when:"Jan 2026 – Jul 2026",role:"Content Creator (Part-time)",c:INK,k:PAPER,w:88,h:300,
+    b:"End-to-end short-form video for a premium Vietnamese coffee brand.",fit:["Content Creator","Video Editor","Social Media Executive"],
+    ch:[{t:"The company",intro:"La Viet Coffee is a premium Vietnamese coffee brand."},
+        {t:"Content Creator (Part-time)",when:"Jan 2026 – Jul 2026",tasks:["Led end-to-end video production, from scripting and shooting to post-editing in CapCut, creating high-quality short-form videos for all social media platforms","Developed content ideas that translated marketing objectives into social-first storytelling"]}]},
+   {sh:0,t:"DarlingnPlanners",sp:"DarlingnPlanners",sr:"Social Media",when:"May 2025 – May 2026",role:"Social Media Collaborator",c:BUT,k:INK,w:86,h:310,
+    b:"Social content for a wedding planning team.",fit:["Social Media Executive","Content Creator"],
+    ch:[{t:"The company",intro:"DarlingnPlanners is a wedding planner team striving to create unique weddings."},
+        {t:"Social Media Collaborator",when:"May 2025 – May 2026",tasks:["Created and edited high-quality, engaging content for marketing campaigns across platforms","Supported the formatting and adaptation of digital assets, following strict content calendars and brand communication goals to keep campaigns visible"]}]},
+   {sh:0,t:"The Cocoa Project",sp:"The Cocoa Project",sr:"Intern & Freelancer",when:"Nov 2024 – May 2026",role:"Branding & Communications Intern & Freelancer",c:SKY,k:INK,w:96,h:360,hl:["9","shoot projects in one year",2],
+    b:"Two roles inside one chocolate brand: first running the channels as an intern, then producing and planning content as a freelancer.",fit:["Social Media Executive","Content Creator","Creative Producer"],
+    ch:[{t:"The company",intro:"The Cocoa Project is a sustainably crafted local chocolate brand from Saigon, with three faces: Cocoa Café, Cocoa Kitchen and Cocoa Shop.",facts:["Est. 2020","Cocoa Café","Cocoa Kitchen","Cocoa Shop"]},
+        {t:"Branding & Communications Intern",tasks:["Managed day-to-day operations of the social channels across Facebook, Instagram and Threads: scheduling and publishing, profile upkeep, moderation, and replying to comments and messages","Collected and consolidated data for weekly and monthly social media reports, tracking content performance and social listening","Worked with cross-functional teams on content that supported business objectives, and helped develop creative copy and concepts for campaigns"]},
+        {t:"Branding & Communications Freelancer",tasks:["Planned short-term and long-term content initiatives, designed creative concepts and ran professional on-site photoshoots","Handled every step for Cocoa Café and Cocoa Kitchen: on-site photography and filming, graphic design, and copywriting for all social channels","Built communication plans for brand campaigns and large-scale events, bridging Facebook, TikTok and web to maximize reach and engagement"],st:[["9","shoot projects, Dec 2024 – Dec 2025"]],
+         posts:[["Hạt điều phủ sô-cô-la đen","cocoa-01.jpg","Cocoa Café · Facebook"],["Bánh Quiche Nấm","cocoa-02.jpg","Cocoa Café · Facebook"],["Cây ca cao có hoa","cocoa-03.jpg","Cocoa Café · Facebook"],["Making of bánh chuối","cocoa-04.jpg","Cocoa Café · Facebook"],["Bánh chuối","cocoa-05.jpg","Cocoa Café · Facebook"],["Mừng ngày Quốc tế Sô-cô-la","cocoa-06.jpg","Cocoa Café · Facebook"]]}]},
+   {sh:0,t:"Will & Tina Media",sp:"Will & Tina Media",sr:"Operations",when:"Apr 2025 – Oct 2025",role:"Operations & Project Assistant",c:PAPER,k:INK,w:86,h:300,hl:["200K+","follower channel supported",1],
+    b:"Behind the scenes of a comedy channel with a very active audience.",fit:["Content Creator","Project Assistant"],
+    ch:[{t:"The company",intro:"Will & Tina Media is a couple’s comedy channel (@itswillandtina) with a highly active digital community of 200,000+ followers.",facts:["200,000+ followers"]},
+        {t:"Operations & Project Assistant",when:"Apr 2025 – Oct 2025",tasks:["Followed social trends, platform updates, new formats and audience behavior to bring fresh content ideas and improve organic engagement","Assisted in video shooting and stayed ready for on-camera presentations and voice-over recording"]}]},
+   {sh:0,t:"Metanoia III",sp:"Metanoia III",sr:"Event Coordinator",when:"Aug 2025 – Oct 2025",role:"Event & Communication Coordinator",c:INK,k:PAPER,w:82,h:290,
+    b:"A talk event run end to end.",fit:["Event Coordinator","Project Management"],
+    ch:[{t:"The company",intro:"Metanoia III is an event by The Tri Way (@the.tri.way) exploring psychological and philosophical themes."},
+        {t:"Event & Communication Coordinator",when:"Aug 2025 – Oct 2025",tasks:["Directed end-to-end event operations, timeline control and stage execution for a seamless experience","Aligned internal production teams, external vendors and high-profile keynote speakers"],st:[["100+","attendees"]]}]},
+   {sh:1,t:"Ban Phong trào – Tình nguyện UEH",sp:"Ban Phong trào",sr:"Communications & PR",when:"Nov 2022 – Aug 2024",role:"Communications & Public Relations Collaborator",c:BUT,k:INK,w:94,h:330,hl:["300K+","reach on one festival",1],
+    b:"The committee behind the university’s flagship events.",fit:["Event Marketing","PR & Communications","Social Media Executive"],
+    ch:[{t:"The company",intro:"A core professional committee under the UEH Student Union that runs the university’s flagship events.",facts:["Nov 2022 – Aug 2024"]},
+        {t:"Communications & Public Relations Collaborator",when:"Nov 2022 – Aug 2024",
+         tasks:["Coordinated end-to-end event logistics, from planning to execution, for flagship university events of up to 5,000 attendees, including venue booking, on-site setup and crowd control","Worked directly with external vendors, technical teams and performers to keep delivery smooth and on time"],st:[["5,000","attendees at flagship events"]],
+         works:[{t:"Nối Vòng Tay Lớn 2023",d:"A cultural festival welcoming new UEH students over four festival days, ending with a night festival.",tasks:["Planned the media on Facebook, Instagram and TikTok","Briefed the image and video teams on the visuals for posts","Coordinated business partners, performers and PR partners"],st:[["1,000+","participants"],["300K+","reach"],["1,300+","reactions"],["500+","comments"],["600+","shares"]]},
+                {t:"Prime Wave 2023",d:"A multi-week welcome series for UEH’s Class 49: avatar frames, minigames, challenges and a welcome music video.",tasks:["Planned the media on Facebook, Instagram and TikTok","Worked with the image and video teams on every visual"],st:[["30K+","reach"],["700+","reactions"],["200+","comments"],["100+","shares"]],
+                 posts:[["Thay avatar frame","bpt-01.jpg",""],["Công bố danh sách trại sinh","bpt-02.jpg",""],["Casting call","bpt-03.jpg",""],["Tại sao nên casting","bpt-04.jpg",""],["Collab cùng KOLs","bpt-05.jpg",""]]},
+                {t:"UEH Youth Festival 2023",d:"Festival media across registration, schedule and on-site announcements.",
+                 posts:[["Hướng dẫn lộ trình đến địa điểm tham gia UYF 2023","uyf-01.jpg",""],["Công bố danh sách trại sinh UYF 2023","uyf-02.jpg",""],["Color Me Run","uyf-03.jpg",""],["Gia hạn đăng ký","uyf-04.jpg",""],["Thông báo đăng ký đợt 2","uyf-05.jpg",""],["Thông báo còn 24h đăng ký UYF 2023","uyf-06.jpg",""]]},
+                {t:"“Tết Tìm Sắc” media campaign · Feb 2023",d:"A communication series welcoming Tết 2023, helping students understand why knowing their own identity matters."}]}]},
+   {sh:1,t:"AIESEC in Vietnam",sp:"AIESEC in Vietnam",sr:"Partnerships",when:"Mar 2023 – Jun 2024",role:"Partnership Manager & Campaign Executive",c:SKY,k:INK,w:98,h:340,hl:["5M+","youths reached in one campaign",4],
+    b:"Partnerships and a youth climate campaign, across four roles.",fit:["Partnership Executive","Campaign Executive","Social Media Executive"],
+    ch:[{t:"The company",intro:"AIESEC in Vietnam is the Vietnam branch of a youth-led global network of about 40,000 members in 120+ countries working toward progressive social impact. I was part of the Ho Chi Minh City branch.",facts:["Mar 2023 – Jun 2024","Ho Chi Minh City branch","40,000 members · 120+ countries"]},
+        {t:"Partnership Development Executive",when:"Aug 2023 · Wave Vietnam",tasks:["Researched and interviewed business partners to understand their needs","Built proposals, scripts and a B2B partner database","Tracked communication, on-site management and benefits for 3 partners (3P Eyecare, World Education, DigiUni)"],st:[["45M VND","B2B partnerships secured"],["800","sign-up forms (event + camp)"],["~300","participants"],["112%","individual GVA"],["Marvellous Member","HCMC branch, Q3–Q4 2023"]]},
+        {t:"Partnership Development Manager (University Partners)",tasks:["Coordinated outreach across universities and Media Partners to keep campaign execution smooth"],st:[["8","universities"],["20","media partners"]]},
+        {t:"Marketing Executive · F75 Project",when:"Oct 2024",tasks:["Co-directed marketing communications and on-ground activations with Unilever Vietnam and YouthSpeak Vietnam for “Búng tay, Tách nhựa”, a youth climate campaign","Planned the strategy for 3,000,000 digital reach and 200 youth engagements, and wrote content on Facebook and TikTok","Managed the community group and worked with 20+ Media Partners from planning to final reporting"],st:[["5M+","reach, against a 3M target"],["50K+","interactions"],["3,300+","youth engaged"],["403","team registrations"],["9.19/10","youth CSAT"],["182kg","plastic collected"]]},
+        {t:"Promotion Team · IGNITE 2024"}]},
+   {sh:1,t:"S Communications",sp:"S Communications",sr:"Partnership Ops",when:"Dec 2024 – May 2026",role:"Partnership & Sponsorship Operations Manager",c:PAPER,k:INK,w:92,h:320,hl:["80M+ VND","partner budget managed",1],
+    b:"The business side of a student media group.",fit:["Partnership Executive","Project Management","Campaign Executive"],
+    ch:[{t:"The company",intro:"S Communications is a student communications group under the UEH Student Association, founded in 1999, with 200+ active members and one of the largest in the South.",facts:["Est. 1999","200+ active members"]},
+        {t:"Partnership & Sponsorship Operations Manager",when:"Dec 2024 – May 2026",tasks:["Coordinated administrative requirements: legal contracts, invoicing and deliverables for corporate partners"],st:[["11+","corporate partners"],["80M+ VND","budget managed"]],
+         works:[{t:"BUPNON TEA365",d:"The 2024 Student Awareness Campaign, inviting young people to reflect on how they spend.",tasks:["Executed user-generated content and online minigame campaigns"],st:[["20,000+","total engagements"]]}]}]},
+   {sh:2,t:"Ghibli in Town",sp:"Ghibli in Town",sr:"School project",when:"Press launch · 2025",role:"Social Content Production & Management",c:INK,k:PAPER,w:82,h:300,
+    b:"Social content for a press launch.",fit:["Social Media Executive","Content Creator"],
+    ch:[{t:"The project",intro:"A school project: the press launch of Ghibli in Town."},
+        {t:"Social Content Production & Management",tasks:["Social content production and management on Facebook"]}]},
+   {sh:2,t:"Personal Projects",soon:1,w:80,h:310}
+  ];
+  const dlg=$('book'),shelves=$('shelves'),pg=$('pg'),rd={o:null,i:0,name:""};
+  const render=()=>{
+    const o=rd.o,i=rd.i,list=o.ch||[],c=list[i-1];pg.innerHTML='';
+    const ul=a=>{const u=el('ul');a.forEach(x=>u.append(el('li',null,x)));return u};
+    const stats=a=>{const g=el('div','res');a.forEach(x=>{const d=el('div');d.append(el('b',null,x[0]),el('span',null,x[1]));g.append(d)});return g};
+    const posts=a=>{const g=el('div','pgrid');a.forEach(x=>{const d=el('div','pcard'),im=el('div','im');im.innerHTML='<img src="images/stories/'+x[1]+'" alt="" onerror="this.remove()">';const p=el('p',null,x[0]);if(x[2])p.append(el('small',null,x[2]));d.append(im,p);g.append(d)});return g};
+    if(i===0){
+      pg.append(el('p','k',(o.when||'')+(o.role?' · '+o.role:'')),el('h3',null,o.t),el('p',null,o.b||'This story is still being written. Check back soon.'));
+      const ch=el('div','chips');(o.fit||[]).forEach(x=>ch.append(el('span',null,x)));pg.append(ch);
+      if(list.length){
+        pg.append(el('h4',null,'Contents'));const ol=el('ol','contents');
+        list.forEach((x,k)=>{const li=el('li'),b=el('button');b.type='button';b.append(el('b',null,String(k+1)),el('span',null,x.t));b.onclick=()=>go(k+1);li.append(b);ol.append(li)});
+        pg.append(ol);
+      }
+    }else{
+      pg.append(el('p','k','Chapter '+i+(c.when?' · '+c.when:'')),el('h3',null,c.t));
+      if(c.intro)pg.append(el('p',null,c.intro));
+      if(c.facts){const f=el('div','chips');c.facts.forEach(x=>f.append(el('span',null,x)));pg.append(f)}
+      if(c.tasks)pg.append(el('h4',null,'What I did'),ul(c.tasks));
+      if(c.st)pg.append(el('h4',null,'Results'),stats(c.st));
+      (c.works||[]).forEach(w=>{
+        const d=el('div','work');d.append(el('h4',null,w.t));if(w.d)d.append(el('p',null,w.d));
+        if(w.tasks)d.append(ul(w.tasks));if(w.st){d.append(el('div',null,''),stats(w.st))}
+        if(w.posts)d.append(el('h4',null,'Selected posts'),posts(w.posts));
+        pg.append(d);
+      });
+      if(c.posts)pg.append(el('h4',null,'Selected posts'),posts(c.posts));
+      else if(i>1&&!c.works&&c.tasks)pg.append(el('p','note','Selected posts with captions and images will be added here.'));
+      if(!c.intro&&!c.tasks&&!c.st&&!c.works)pg.append(el('p','note','This chapter is still being written.'));
+    }
+    const toc=$('toc');toc.innerHTML='';
+    ['Contents',...list.map((x,k)=>(k+1)+' · '+x.t)].forEach((x,k)=>{const b=el('button',null,x);b.type='button';b.onclick=()=>go(k);if(k===i)b.setAttribute('aria-current','true');toc.append(b)});
+    $('rdNo').textContent=i===0?'Contents':'Chapter '+i+' / '+list.length;
+    $('rdPrev').disabled=i===0;$('rdNext').disabled=i>=list.length;
+    $('rdNext').textContent=i===0?'Start reading →':'Next chapter →';
+  };
+  const go=n=>{
+    if(n<0||n>(rd.o.ch||[]).length||n===rd.i)return;
+    const fwd=n>rd.i;rd.i=n;
+    if(calm){render();return}
+    pg.style.transformOrigin=fwd?'left center':'right center';
+    const a=fwd?-80:80;
+    pg.animate([{transform:'rotateY(0)',opacity:1},{transform:'rotateY('+a+'deg)',opacity:.4}],{duration:240,easing:'ease-in'}).finished
+      .then(()=>{render();pg.scrollTop=0;pg.animate([{transform:'rotateY('+(-a)+'deg)',opacity:.4},{transform:'rotateY(0)',opacity:1}],{duration:260,easing:'ease-out'})})
+      .catch(render);
+  };
+  const openBook=(o,name,at)=>{
+    rd.o=o;rd.i=at||0;
+    const side=$('rdSide');side.style.setProperty('--c',o.soon?INK:o.c);side.style.setProperty('--tc',o.soon?PAPER:o.k);
+    $('rdShelf').textContent=name;$('rdT').textContent=o.t;$('rdS').textContent=o.when||'';$('rdW').textContent=o.role||'';
+    render();pg.scrollTop=0;dlg.showModal();
+  };
+  const picks=$('picksList');
+  SHELVES.forEach((name,i)=>{
+    const wrap=el('div','bshelf'),row=el('div','row'),sc=el('div','scroll');
+    sc.append(row);wrap.append(el('h3',null,name),sc);shelves.append(wrap);
+    BOOKS.filter(o=>o.sh===i).forEach(o=>{
+      const b=el('button','book'+(o.soon?' soon':''));
+      b.type='button';b.setAttribute('aria-haspopup','dialog');
+      b.style.cssText='--w:'+o.w+'px;--h:'+o.h+'px;--c:'+(o.c||'')+';--tc:'+(o.k||'');
+      b.append(el('b',null,o.sp||o.t),el('span',null,o.soon?'Coming soon':o.sr));
+      b.onclick=()=>openBook(o,name,0);row.append(b);
+      if(o.hl){const li=el('li'),pb=el('button'),sp=el('span',null,o.hl[1]);pb.type='button';sp.append(el('small',null,o.t+' · '+o.sr));pb.append(el('b',null,o.hl[0]),sp);pb.onclick=()=>openBook(o,name,o.hl[2]);li.append(pb);picks.append(li)}
+    });
+  });
+  $('rdPrev').onclick=()=>go(rd.i-1);$('rdNext').onclick=()=>go(rd.i+1);
+  $('rdClose').onclick=()=>dlg.close();
+  dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+  dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(rd.i+1);if(e.key==='ArrowLeft')go(rd.i-1)});
+
+  /* ===== QUẦY FILM =====
+     Mỗi cuộn: ảnh đặt tại images/rolls/<k>/01.jpg, 02.jpg… · Mỗi khung: [tiêu đề, thời gian, (số nổi bật)] */
+  const ROLLS=[
+   {k:"shoot",h:"Shooting",f:[["Khoảnh khắc sô-cô-la diệu kỳ","Dec 2024"],["New Year Shooting","Feb 2025"],["International Women’s Day Product Shooting","Mar 2025"],["Daily Promotion Shooting","Apr 2025"],["60 Days New Products","Aug 2025"],["60 Days Product Event","Aug 2025"],["60 Days Products Promotion","Oct 2025"],["Xmas 2025","Nov 2025"],["Cocoa Kitchen Menu Photos","Dec 2025"]]},
+   {k:"video",h:"Video editing",f:[["La Viet Coffee short-form videos","2026"],["Will & Tina Media shoots","2025"],["Making of bánh chuối · Cocoa","Jun 2025"]]},
+   {k:"image",h:"Image editing & design",f:[["Cocoa Café & Kitchen graphics","2025"],["DarlingnPlanners campaign content","2025 – 26"],["BUPNON TEA365 UGC campaign",""]]},
+   {k:"social",h:"Social media management",f:[["Cocoa · Facebook, Instagram, Threads","2024 – 26","3 channels"],["La Viet Coffee","2026"],["DarlingnPlanners","2025 – 26"],["Will & Tina Media","2025","200K+ followers"]]},
+   {k:"pm",h:"Project management",f:[["Partner & sponsor operations · S Communications","2025","11+ partners"],["Budget managed · S Communications","2025","80M+ VND"],["Media partners · F75 Project","2024","20+ partners"],["B2B partnerships · AIESEC","2023","45M VND"]]},
+   {k:"events",h:"Events",f:[["Flagship university events","2022 – 24","5,000 guests"],["Nối Vòng Tay Lớn","Aug 2023","300K reach"],["Prime Wave","Aug 2023","30K reach"],["Metanoia III","Aug – Oct 2025","100+ guests"],["Búng tay, Tách nhựa","Oct 2024","5M+ reach"],["Tết Tìm Sắc campaign","Feb 2023"],["UEH Youth Festival","Feb 2023"]]}
+  ];
+  ROLLS.forEach(r=>{
+    const box=el('div','roll'),reel=el('div','reel'),st=el('div','strip');
+    r.f.forEach((f,i)=>{
+      const fig=el('figure','frame'),ph=el('div','ph');
+      ph.innerHTML='<img src="images/rolls/'+r.k+'/'+String(i+1).padStart(2,'0')+'.jpg" alt="" onerror="this.remove()">';
+      if(f[2])ph.append(el('b',null,f[2]));
+      const cap=el('figcaption',null,f[0]);if(f[1])cap.append(el('time',null,f[1]));
+      fig.append(ph,cap);reel.append(fig);
+    });
+    st.append(reel);box.append(el('h3',null,'Roll · '+r.h),st);$('rolls').append(box);
+  });
+
+  /* Máy ảnh: mỗi lần bấm chụp ra một tấm ảnh kèm con số quan trọng */
+  const SHOTS=[["5,000,000+","youths reached","Unilever × F75 Project"],["45M VND","B2B partnerships secured","AIESEC in Vietnam"],["11+","corporate partners, 80M+ VND budget","S Communications"],["20,000+","total engagements","BUPNON TEA365 campaign"],["5,000","attendees at flagship events","Ban Phong trào – UEH"],["200K+","followers on the channel","Will & Tina Media"],["20+","Media Partners coordinated","AIESEC in Vietnam"],["3.8 / 4.0","GPA, Bachelor of Marketing","UEH"]];
+  let shot=0;
+  const upd=()=>{
+    $('cnt').textContent=shot+' / '+SHOTS.length+' photos';
+    const out=shot>=SHOTS.length;
+    $('shoot').hidden=out;$('shutter').disabled=out;$('rewind').hidden=!out;
+  };
+  const snap=()=>{
+    if(shot>=SHOTS.length)return;
+    const w=$('wall');if(shot===0)w.innerHTML='';
+    const o=SHOTS[shot++],p=el('div','pol');p.style.setProperty('--r',((shot*7)%9-4)+'deg');
+    p.append(el('div','n',o[0]),el('p',null,o[1]+' · '+o[2]));w.append(p);
+    const c=$('cam');c.classList.remove('fire');void c.offsetWidth;if(!calm)c.classList.add('fire');
+    upd();
+  };
+  $('shoot').onclick=snap;$('shutter').onclick=snap;
+  $('rewind').onclick=()=>{shot=0;$('wall').innerHTML='<p class="empty">Press the shutter. Every photo develops into a number I’m proud of.</p>';upd()};
+  upd();
+
+  /* ===== HERO: hiệu ứng gõ chữ lần lượt các vai trò ===== */
+  const ROLES=["social media marketer","content creator","campaign executive","partnership manager","storyteller"];
+  const typed=$('typed');
+  if(calm){typed.textContent=ROLES[0];typed.nextElementSibling.style.animation='none'}
+  else{
+    let r=0,c=0,del=false;
+    const tick=()=>{
+      const w=ROLES[r];
+      typed.textContent=w.slice(0,c);
+      let d=del?35:70;
+      if(!del&&c===w.length){del=true;d=1400}
+      else if(del&&c===0){del=false;r=(r+1)%ROLES.length;d=350}
+      else c+=del?-1:1;
+      setTimeout(tick,d);
+    };
+    tick();
+  }
+
+  /* ===== QUẦY GAME. Thêm một đĩa = thêm một khối. type: disc (hộp đĩa) hoặc cart (băng game) ===== */
+  const GAMES=[{t:"Design",type:"disc"},{t:"Writing",type:"cart"},{t:"Sketchbook",type:"disc"},{t:"Notes",type:"cart"}];
+  GAMES.forEach(g=>{const c=el('div','case '+g.type);c.append(el('b',null,g.t),el('span',null,'Loading…'));$('rack').append(c)});
+})();
+</script>
+</body>
+</html>
