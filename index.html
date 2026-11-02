@@ -653,6 +653,7 @@ footer{padding:1.25rem 0;font-size:.85rem;opacity:.8}
   </div>
 </dialog>
 
+<script src="dnp-posts.js"></script>
 <script>
 (()=>{
   const $=id=>document.getElementById(id);
@@ -810,7 +811,7 @@ footer{padding:1.25rem 0;font-size:.85rem;opacity:.8}
    {sh:0,t:"DarlingnPlanners",sp:"DarlingnPlanners",sr:"Social Media",when:"May 2025 – May 2026",role:"Social Media Collaborator",c:BUT,k:INK,w:86,h:310,
     b:"Social content for a wedding planning team.",fit:["Social Media Executive","Content Creator"],
     ch:[{t:"The company",intro:"DarlingnPlanners is a wedding planner team striving to create unique weddings."},
-        {t:"Social Media Collaborator",when:"May 2025 – May 2026",tasks:["Created and edited high-quality, engaging content for marketing campaigns across platforms","Supported the formatting and adaptation of digital assets, following strict content calendars and brand communication goals to keep campaigns visible"]}]},
+        {t:"Social Media Collaborator",when:"May 2025 – May 2026",tasks:["Created and edited high-quality, engaging content for marketing campaigns across platforms","Supported the formatting and adaptation of digital assets, following strict content calendars and brand communication goals to keep campaigns visible"],hi:["36 posts shown here, from wedding recaps and reels to brand stories, May 2025 – May 2026."],posts:window.DNP_POSTS||[]}]},
    {sh:0,t:"The Cocoa Project",sp:"The Cocoa Project",sr:"Intern & Freelancer",when:"Nov 2024 – May 2026",role:"Branding & Communications Intern & Freelancer",c:SKY,k:INK,w:96,h:360,hl:["9","shoot projects in one year",99],hm:[["9","shoot projects, Dec 2024 – Dec 2025"],["3","channels managed: Facebook, Instagram, Threads"]],
     b:"Two roles inside one chocolate brand: first running the channels as an intern, then producing and planning content as a freelancer.",fit:["Social Media Executive","Content Creator","Creative Producer"],
     ch:[{t:"The company",intro:"The Cocoa Project is a sustainably crafted local chocolate brand from Saigon, with three faces: Cocoa Café, Cocoa Kitchen and Cocoa Shop.",facts:["Est. 2020","Cocoa Café","Cocoa Kitchen","Cocoa Shop"]},
@@ -871,7 +872,7 @@ footer{padding:1.25rem 0;font-size:.85rem;opacity:.8}
     const f=now=>{const p=Math.min(1,(now-t0)/1000),v=n*(1-Math.pow(1-p,3));e.textContent=m[1]+v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})+m[3];if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)};
   const closeOv=()=>{ov.hidden=true;ov.innerHTML=''};
   ov.addEventListener('click',e=>{if(e.target===ov)closeOv()});
-  const imgTag=(f,alt)=>{const i=el('img');i.src='images/stories/'+f;i.alt=alt||'';i.onerror=()=>i.remove();return i};
+  const imgTag=(f,alt,rm)=>{const i=el('img');i.loading='lazy';i.src='images/stories/'+f;i.alt=alt||'';i.onerror=()=>{if(rm&&!i.dataset.r){i.dataset.r=1;i.referrerPolicy='no-referrer';i.src=rm}else i.remove()};return i};
   const openZoom=(f,cap)=>{ov.innerHTML='';ov.hidden=false;ov.style.alignItems='center';const i=el('img','zoomimg');i.src='images/stories/'+f;i.alt=cap||'';i.onerror=()=>{i.replaceWith(el('p','ph0',cap||'Image'))};ov.append(i)};
   const openPost=p=>{
     ov.innerHTML='';ov.hidden=false;ov.style.alignItems='';
@@ -879,11 +880,11 @@ footer{padding:1.25rem 0;font-size:.85rem;opacity:.8}
     const car=el('div','car'),med=el('div','med'),pv=el('button','nv l','‹'),nx=el('button','nv r','›'),dots=el('div','dots');
     const show=()=>{med.innerHTML='';dots.innerHTML='';
       if(p.vid){const v=el('video');v.src=p.vid;v.controls=true;v.playsInline=true;med.append(v)}
-      else if(n){const i=el('img');i.src='images/stories/'+p.imgs[k];i.alt='';i.onerror=()=>i.replaceWith(el('span','ph0','Image '+(k+1)));med.append(i);if(n>1)for(let q=0;q<n;q++)dots.append(el('i',q===k?'on':''))}
+      else if(n){const i=el('img');i.src='images/stories/'+p.imgs[k];i.alt=(p.t?p.t+' · ':'')+'photo '+(k+1)+' of '+n;i.onerror=()=>{const rm=p.rm&&p.rm[k];if(rm&&!i.dataset.r){i.dataset.r=1;i.referrerPolicy='no-referrer';i.src=rm}else i.replaceWith(el('span','ph0','Image '+(k+1)))};med.append(i);if(n>1)for(let q=0;q<n;q++)dots.append(el('i',q===k?'on':''))}
       else med.append(el('span','ph0','No media yet'))};
     pv.type=nx.type='button';pv.onclick=()=>{k=(k+n-1)%n;show()};nx.onclick=()=>{k=(k+1)%n;show()};
     car.append(med);if(n>1&&!p.vid)car.append(pv,nx,dots);show();
-    dr.append(x,el('p','k',p.pf+(p.src?' · '+p.src:'')),car,el('p','cap',p.cap||'Caption to be added.'));
+    dr.append(x,el('p','k',p.pf+(p.src?' · '+p.src:'')),car,...(p.t?[Object.assign(el('h3',null,p.t),{style:'font-size:1.25rem;margin:0 0 .6rem'})]:[]),el('p','cap',p.cap||'Caption to be added.'));
     if(p.m){const g=el('div','mets');[['reach','Reach'],['likes','Likes'],['comments','Comments'],['shares','Shares']].forEach(([a,l])=>{if(p.m[a]==null)return;const d=el('div');d.append(el('b',null,String(p.m[a])),el('span',null,l));g.append(d)});dr.append(el('h4',null,'Engagement'),g)}
     if(p.url){const a=el('a','btn red','Open original post ↗');a.href=p.url;a.target='_blank';a.rel='noopener';a.style.marginTop='1rem';dr.append(a)}
     ov.append(dr);x.focus();
@@ -891,7 +892,7 @@ footer{padding:1.25rem 0;font-size:.85rem;opacity:.8}
   const postGrid=(box,list)=>{
     const fl=el('div','fl'),g=el('div','psg');
     const draw=f=>{g.innerHTML='';const L=list.filter(p=>f==='All'||p.pf===f);if(!L.length)g.append(el('p','note','No '+f+' posts yet.'));
-      L.forEach(p=>{const b=el('button','pp'),im=el('div','im');b.type='button';if(p.imgs[0])im.append(imgTag(p.imgs[0]));im.append(el('em',null,p.pf));b.append(im,el('p',null,(p.cap||'').split('\n')[0].slice(0,70)));b.onclick=()=>openPost(p);g.append(b)})};
+      L.forEach(p=>{const b=el('button','pp'),im=el('div','im');b.type='button';if(p.imgs[0])im.append(imgTag(p.imgs[0],p.t||'',p.rm&&p.rm[0]));im.append(el('em',null,p.pf));const pt=el('p',null,p.t||(p.cap||'').split('\n')[0].slice(0,70));if(p.src){const sm=el('small',null,p.src);sm.style.cssText='display:block;opacity:.65;margin-top:.15rem';pt.append(sm)}b.append(im,pt);b.onclick=()=>openPost(p);g.append(b)})};
     PFS.forEach(f=>{const b=el('button',null,f);b.type='button';b.setAttribute('aria-pressed',f==='All');b.onclick=()=>{fl.querySelectorAll('button').forEach(z=>z.setAttribute('aria-pressed',z===b));draw(f)};fl.append(b)});
     draw('All');box.append(fl,g);
   };
